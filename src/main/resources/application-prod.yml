@@ -1,0 +1,16 @@
+server:
+  port: 8000
+
+app:
+  datasource:
+    color-lottery:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/color_lottery?zeroDateTimeBehavior=CONVERT_TO_NULL&characterEncoding=utf8&useSSL=false
+      username: dev
+      password: synergyinfo
+      minimum-idle: 2
+      maximum-pool-size: 64
+      idle-timeout: 60000
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      pool-name: color-lottery
+  zookeeper-single: 127.0.0.1:2181
+  redis-lottery: redis://127.0.0.1:3306/1
